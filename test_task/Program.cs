@@ -9,6 +9,11 @@ string[] arrayOfStrings = { "Уфа", "Белгород", "Москва", "СП�
 int maxCountSymbols = 3;
 
 string[] newArrayOfStrings = FillArrayMaxCount(arrayOfStrings);
+Console.Write("[");
+PrintArray(arrayOfStrings);
+Console.Write("] -> [");
+PrintArray(newArrayOfStrings);
+Console.Write("]");
 
 string[] FillArrayMaxCount(string[] arr)
 {
@@ -23,4 +28,15 @@ string[] FillArrayMaxCount(string[] arr)
         }
     }
     return newArr;
+}
+
+void PrintArray(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] != null)
+        {
+            Console.Write("\"" + arr[i] + "\" ");
+        }
+    }
 }
