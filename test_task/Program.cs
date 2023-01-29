@@ -6,3 +6,21 @@
 Console.Clear();
 
 string[] arrayOfStrings = { "Уфа", "Белгород", "Москва", "СПб", "Екб", "Ульяновск", "УУ" };
+int maxCountSymbols = 3;
+
+string[] newArrayOfStrings = FillArrayMaxCount(arrayOfStrings);
+
+string[] FillArrayMaxCount(string[] arr)
+{
+    string[] newArr = new string[arr.Length];
+    int j = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= maxCountSymbols)
+        {
+            newArr[j] = arr[i];
+            j++;
+        }
+    }
+    return newArr;
+}
